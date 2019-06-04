@@ -1,7 +1,7 @@
 # encryption-algorithm
 
-encryption algorithm:
+Encryption Algorithm:
 
-[x] MD5
-[x] DES
-[] Base64
+- [x] MD5   
+- [X] DES   
+- [ ] Base64   
