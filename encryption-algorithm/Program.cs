@@ -16,8 +16,8 @@ namespace EncryptionAlgorithm
             String strOracleE = CryptographyUtilt.EncryptDES("Oracle");
             String strOracleD = CryptographyUtilt.DecryptDES("Oracle");
 
-            Debug.WriteLine("Encrypt >>>>>>>>>>>> " + strOracleE);
-            Debug.WriteLine("Encrypt >>>>>>>>>>>> " + strOracleD);
+            Debug.WriteLine("DES Encrypt >>>>>>>>>>>> " + strOracleE);
+            Debug.WriteLine("DES Encrypt >>>>>>>>>>>> " + strOracleD);
         }
     }
 }
