@@ -14,10 +14,10 @@ namespace EncryptionAlgorithm
         {
             
             String strOracleE = CryptographyUtilt.EncryptDES("Oracle");
-            String strOracleD = CryptographyUtilt.DecryptDES("Oracle");
+            String strOracleD = CryptographyUtilt.DecryptDES("0QiAN7Xmnr8=");
 
             Debug.WriteLine("DES Encrypt >>>>>>>>>>>> " + strOracleE);
-            Debug.WriteLine("DES Encrypt >>>>>>>>>>>> " + strOracleD);
+            Debug.WriteLine("DES Decrypt >>>>>>>>>>>> " + strOracleD);
         }
     }
 }

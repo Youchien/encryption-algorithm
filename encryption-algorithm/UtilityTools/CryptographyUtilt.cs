@@ -87,6 +87,7 @@ namespace EncryptionAlgorithm.UtilityTools
         }
         #endregion
 
+
         #region DES
         /// <summary>
         /// DES加密字符串。
@@ -242,6 +243,61 @@ namespace EncryptionAlgorithm.UtilityTools
             {
                 return bytes;
             }
+        }
+        #endregion
+
+
+        #region Base64
+        /// <summary>
+        /// Base64加密。
+        /// </summary>
+        /// <param name="input">需要加密的字符串。</param>
+        /// <returns>返回加密字符串。</returns>
+        public static string EncryptBase64(string input)
+        {
+            return EncryptBase64(input, new UTF8Encoding());
+        }
+
+        /// <summary>
+        /// Base64加密。
+        /// </summary>
+        /// <param name="input">需要加密的字符串。</param>
+        /// <param name="encoding">字符编码。</param>
+        /// <returns>返回加密字符串。</returns>
+        public static string EncryptBase64(string input, Encoding encoding)
+        {
+            return Convert.ToBase64String(encoding.GetBytes(input));
+        }
+
+        public static string EncryptBase64(byte[] data)
+        {
+            return Convert.ToBase64String(data);
+        }
+
+        /// <summary>
+        /// Base64解密。
+        /// </summary>
+        /// <param name="input">需要解密的字符串。</param>
+        /// <returns>返回解密字符串。</returns>
+        public static string DecryptBase64(string input)
+        {
+            return DecryptBase64(input, new UTF8Encoding());
+        }
+
+        /// <summary>
+        /// Base64解密。
+        /// </summary>
+        /// <param name="input">需要解密的字符串。</param>
+        /// <param name="encoding">字符的编码。</param>
+        /// <returns>返回解密字符串。</returns>
+        public static string DecryptBase64(string input, Encoding encoding)
+        {
+            return encoding.GetString(DecryptBase64ToBytes(input));
+        }
+
+        public static byte[] DecryptBase64ToBytes(string input)
+        {
+            return Convert.FromBase64String(input);
         }
         #endregion
     }
