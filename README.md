@@ -3,5 +3,5 @@
 Encryption Algorithm status:
 
 - [x] MD5
-- [X] DES
-- [ ] Base64
+- [x] DES
+- [x] Base64
